@@ -5,25 +5,51 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/2d64613327.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet"> 
 
+<!--new-tweet-->
+
+<link rel="stylesheet" href="./styles/new-tweet.css" />
+    <!-- logo css-->
+
+<link rel="stylesheet" href="./styles/nav.css" />
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
 
     <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="./vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="./scripts/client.js"></script>
   </head>
-
+<!--Header CSS-->
+<link rel="stylesheet" href="./styles/header.css" type="text/css" />
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+    <nav class="navbar">
+      <span class="navbar-logo">tweeter</span>
+    <span class="newTweet"> <strong>Write </strong>a new tweet<span class='arrow' ><i class="fas fa-angle-double-down"></i></span></span>
+ 
+  </nav>
 
+  <header>
+      <div>
+          <img src="/images/arabic.png"> 
+          <h2>Layth <span class="name-light">Jabbar</span></h2> 
+      </div>
+  </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+  <main>
+  <!-- <section class="new-tweet"> -->
+  <form  action="/tweets/" method="POST">
+  <div> <textarea class="text" name="text" placeholder="What are you humming about?"></textarea>
+  <input class="button" type="submit" value="Tweet">
+  <span class="counter">140</span></div>
+  </form>
+<!-- </section> -->
+</main>
+</body>
 </html>

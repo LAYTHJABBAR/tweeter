@@ -18,3 +18,8 @@ font-family: 'Bungee', cursive;
     resize: none;
     height: 50px;
 }
+.red {
+color: red;
+float: right;
+font-family: 'Bungee', cursive;
+}

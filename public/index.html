@@ -10,46 +10,52 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee&display=swap" rel="stylesheet"> 
 
-<!--new-tweet-->
+    
+    <!--new-tweet-->
 
-<link rel="stylesheet" href="./styles/new-tweet.css" />
+    <link rel="stylesheet" href="./styles/new-tweet.css" />
     <!-- logo css-->
-
-<link rel="stylesheet" href="./styles/nav.css" />
+    
+    <link rel="stylesheet" href="./styles/nav.css" />
     <!-- App CSS -->
     <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
-
-    <!-- External JS -->
-    <script type="text/javascript" src="./vendor/jquery-2.2.3.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="./scripts/client.js"></script>
+    
   </head>
-<!--Header CSS-->
-<link rel="stylesheet" href="./styles/header.css" type="text/css" />
+  <!--Header CSS-->
+  <link rel="stylesheet" href="./styles/header.css" type="text/css" />
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbar">
       <span class="navbar-logo">tweeter</span>
-    <span class="newTweet"> <strong>Write </strong>a new tweet<span class='arrow' ><i class="fas fa-angle-double-down"></i></span></span>
- 
-  </nav>
-
-  <header>
+      <span class="newTweet"> <strong>Write </strong>a new tweet<span class='arrow' ><i class="fas fa-angle-double-down"></i></span></span>
+      
+    </nav>
+    
+    <header>
       <div>
-          <img src="/images/arabic.png"> 
-          <h2>Layth <span class="name-light">Jabbar</span></h2> 
+        <img src="/images/arabic.png"> 
+        <h2>Layth <span class="name-light">Jabbar</span></h2> 
       </div>
-  </header>
+    </header>
     <!-- Page-specific (main) content here -->
-  <main>
-  <!-- <section class="new-tweet"> -->
-  <form  action="/tweets/" method="POST">
-  <div> <textarea class="text" name="text" placeholder="What are you humming about?"></textarea>
-  <input class="button" type="submit" value="Tweet">
-  <span class="counter">140</span></div>
-  </form>
-<!-- </section> -->
-</main>
-</body>
+    <main>
+      
+     <section class="new-tweet"> 
+        <form  action="/tweets/" method="POST">
+          <div> <textarea class="text" name="text" placeholder="What are you humming about?"></textarea>
+            <input class="button" type="submit" value="Tweet">
+            <span  class="counter">140</span>
+        
+          </form>
+         </section> 
+        </main>
+        <!-- External JS -->
+        <script type="text/javascript" src="./vendor/jquery-2.2.3.min.js"></script>
+        
+        <!-- App JS -->
+        <script type="text/javascript" src="./scripts/client.js"></script>
+        <!--composer-char-counter-->
+        <script src="./scripts/composer-char-counter.js"></script>
+      </body>
+      
 </html>

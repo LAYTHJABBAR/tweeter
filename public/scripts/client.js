@@ -1,4 +1,4 @@
-const data = [
+const data111 = [
   {
     user: {
       name: "Newton",
@@ -31,10 +31,10 @@ const createTweetElement = data => {
     <div class="article-header"></div>
     <div>
       <img src="${data.user.avatars}">
-      <h5 class="tweet-name">${data.user.handle}</h5>
+      <h5 class="tweet-name">${data.user.name}</h5>
       <h3 class="tweet-name-right">${data.user.handle}</h3>
     </div>
-    <div class="texttweet">${data.user.handle}</div><br/>
+    <div class="texttweet">${data.content.text}</div><br/>
     <footer class="article-footer">
       <span class="tweet-time">${data.created_at} </span>
       <div class="tweet-icons">
@@ -55,4 +55,26 @@ const renderTweets = data => {
 //Appending to the DOM after DOM is ready.
 $(document).ready(() => {
   renderTweets(data);
+});
+$( "form" ).submit(function( event ) {
+  let data1 = $(this).serialize();
+  console.log( "Handler sdfghjkmit() called.", $(this).serialize());
+  event.preventDefault();
+
+
+$.ajax({
+  type: "POST",
+  url: "/tweets",
+  data: data1,
+  success: function(data1) {
+    console.log("done", data1);
+  },
+});
+$.ajax({
+  type: "GET",
+  url: "/tweets",
+  success: (data1 => renderTweets(data1))
+
+ 
+})
 });

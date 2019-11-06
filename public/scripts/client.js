@@ -22,36 +22,35 @@ const data = [
     created_at: 1461113959088
   }
 ];
-
+ 
 //Function to create mark up of tweet.
 const createTweetElement = data => {
-  return `<section class="tweets">
-      <article class="tweet">
-        <header>
-          <img src="${data.user.avatars}" alt="Tweeter profile image">
-          <h5>${data.user.name}</h5>
-          <h6>${data.user.handle}</h6>
-        </header>
-        <section class="body">
-          <p>${data.content.text}</p>
-        </section>
-        <footer>
-          <p>${data.created_at}</p>
-          <div class="icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
-    </section>`;
+
+ return `<section id="tweetcontainer" class="head">
+  <article class='tweet'>
+    <div class="article-header"></div>
+    <div>
+      <img src="${data.user.avatars}">
+      <h5 class="tweet-name">${data.user.handle}</h5>
+      <h3 class="tweet-name-right">${data.user.handle}</h3>
+    </div>
+    <div class="texttweet">${data.user.handle}</div><br/>
+    <footer class="article-footer">
+      <span class="tweet-time">${data.created_at} </span>
+      <div class="tweet-icons">
+        <i class="fas fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="fas fa-heart"></i>
+      </div>
+    </footer>
+  </article>
+</section>`
 };
 
-//Function to create tweet
 const renderTweets = data => {
   data.forEach(el => {
     const tweet = createTweetElement(el);
-    $(".container").append(tweet);
+    $(".new-tweet").append(tweet);
   });
 };
 

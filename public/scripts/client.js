@@ -22,7 +22,7 @@ const data = [
     created_at: 1461113959088
   }
 ];
- 
+
 //Function to create mark up of tweet.
 const createTweetElement = data => {
 
@@ -46,14 +46,12 @@ const createTweetElement = data => {
   </article>
 </section>`
 };
-
 const renderTweets = data => {
   data.forEach(el => {
     const tweet = createTweetElement(el);
     $(".new-tweet").append(tweet);
   });
 };
-
 //Appending to the DOM after DOM is ready.
 $(document).ready(() => {
   renderTweets(data);

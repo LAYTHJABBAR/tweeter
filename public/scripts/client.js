@@ -1,7 +1,6 @@
 
 //Function to create mark up of tweet.
 const createTweetElement = data => {
-
   return `
   <article class='tweet'>
     <div class="article-header">
@@ -28,8 +27,6 @@ const renderTweets = data => {
     $("#tweetcontainer").append(tweet);
   });
 };
-
-
 const loadTweets = function () {
   $.ajax({
     type: "GET",
@@ -37,24 +34,6 @@ const loadTweets = function () {
     success: (data1 => renderTweets(data1))
   })
 }
-
-// $(document).ready(() => {
-//   $("form").submit(function (event) {
-//     let data1 = $(this).serialize();
-//     event.preventDefault();
-//     $.ajax({
-//       type: "POST",
-//       url: "/tweets",
-//       data: data1,
-//       success: function () {
-//         loadTweets()
-//       },
-//     });
-//   });
-//   loadTweets()
-// });
-// loadTweets()
-
 $(document).ready(() => {
   loadTweets();
   $("form").submit(function (event) {
@@ -83,27 +62,3 @@ $(document).ready(() => {
 
 
 
-
-// $("form").submit(function (event) {
-//   event.preventDefault();
-//   let dataCh = $(".text").val().length
-//   console.log(dataCh)
-//   let data1 = $(this).serialize();
-//   if (dataCh === 1) {
-//     loadTweets()
-//     alert('NO TEXT TO TWEET ');
-//   } else if (dataCh >= 140) {
-//     alert('character size exceeded')
-//   }
-//   else {
-//     $.ajax({
-//       type: "POST",
-//       url: "/tweets",
-//       data: data1,
-//       success: function () {
-//         loadTweets()
-//       },
-//     });
-//   }
-// });}
-// loadTweets()

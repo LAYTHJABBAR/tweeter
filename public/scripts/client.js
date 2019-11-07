@@ -54,11 +54,15 @@ $(document).ready(() => {
     console.log(dataCh);
     if (dataCh === 0) {
       loadTweets();
+      $(".alerte").css("display", "none");
       $(".alert").css("display", "block");
-    } else if (dataCh >= 140) {
+    } else if (dataCh > 140) {
       loadTweets();
+      $(".alert").css("display", "none");
       $(".alerte").css("display", "block");
     } else {
+      $(".alert").css("display", "none");
+      $(".alerte").css("display", "none");
       $.ajax({
         type: "POST",
         url: "/tweets",

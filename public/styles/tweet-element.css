@@ -5,6 +5,8 @@
   margin-right: 5px;
   margin-top: 25px;
   padding: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .texttweet {
   border-bottom: 5px solid black;

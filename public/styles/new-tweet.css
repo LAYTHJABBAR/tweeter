@@ -17,6 +17,7 @@ font-family: 'Bungee', cursive;
     font-weight: bold;
     resize: none;
     height: 50px;
+    outline-width: 0;
 }
 .red {
 color: red;

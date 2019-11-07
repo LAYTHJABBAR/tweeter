@@ -1,12 +1,10 @@
-
-//Function to create mark up of tweet.
-
-const escape = function (data) {
-  let div = document.createElement('div');
+//function to escape the HTML injection code.
+const escape = function(data) {
+  let div = document.createElement("div");
   div.appendChild(document.createTextNode(data));
   return div.innerHTML;
-}
-
+};
+//Function to create mark up of tweet.
 const createTweetElement = data => {
   return `
   <article class='tweet'>
@@ -25,8 +23,9 @@ const createTweetElement = data => {
       </div>
     </footer>
   </article>
-`
+`;
 };
+//function for new tweet rendering
 const renderTweets = data => {
   $("#tweetcontainer").empty();
   data.forEach(el => {
@@ -34,50 +33,51 @@ const renderTweets = data => {
     $("#tweetcontainer").append(tweet);
   });
 };
-const loadTweets = function () {
+const loadTweets = function() {
   $.ajax({
     type: "GET",
     url: "/tweets",
-    success: (data1 => renderTweets(data1))
-  })
-}
+    success: data => renderTweets(data)
+  });
+};
 $(document).ready(() => {
   loadTweets();
-  $("#categories-toggle").on('click', function(eve){
-    eve.preventDefault(); 
+  $("#categories-toggle").on("click", function(eve) {
+    eve.preventDefault();
     $(this).toggleClass("down");
   });
-  $("form").submit(function (event) {
-    let data1 = $(this).serialize();
+  $("form").submit(function(event) {
+    //function to inspect the entered tweet and return an error message if the entring is null or exceeding the size limit
+    let data = $(this).serialize();
     event.preventDefault();
     let dataCh = $(".text").val().length;
-    console.log(dataCh)
+    console.log(dataCh);
     if (dataCh === 0) {
-      loadTweets()
+      loadTweets();
       $(".alert").css("display", "block");
     } else if (dataCh >= 140) {
-      loadTweets()
+      loadTweets();
       $(".alerte").css("display", "block");
-    }
-    else {
+    } else {
       $.ajax({
         type: "POST",
         url: "/tweets",
-        data: data1,
-        success: function () {
-          loadTweets()
-        },
+        data: data,
+        success: function() {
+          loadTweets();
+        }
       });
     }
   });
-  $("#click").click(function (){
-    $("form").toggle()
-  })
+  //toggling function for the header arrow
+  $("#click").click(function() {
+    $("form").toggle();
+  });
+  //function for no text alert closing
+  $("#closebtn").click(function() {
+    $(".alert").css("display", "none");
+  }); // function for text exceeding limit closing
+  $("#closebtn2").click(function() {
+    $(".alerte").css("display", "none");
+  });
 });
-
-
-
-
-
-
-

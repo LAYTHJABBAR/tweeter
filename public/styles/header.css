@@ -1,3 +1,4 @@
+/* --Header--styling--*/
 .header {
   height: 400px;
   width: 100%;
@@ -9,7 +10,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 .name-light {
   font-weight: 400;
 }
@@ -18,7 +18,6 @@
   text-align: center;
   color: red;
   cursor: pointer;
-  
 }
 .bounce {
   animation: bounce 2s infinite;
@@ -38,5 +37,3 @@
     transform: translateY(-5px);
   }
 }
-
-

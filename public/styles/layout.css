@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+/*Layout-css--*/
 html {
   box-sizing: border-box;
 }
@@ -27,9 +23,5 @@ main {
   margin-right: auto;
   text-align: justify;
   text-justify: inter-word;
-  background-color: #f4f1ec;
-  
+  background-color: #f4f1ec; 
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

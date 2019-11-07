@@ -56,6 +56,7 @@ $(document).ready(() => {
       loadTweets()
       $(".alert").css("display", "block");
     } else if (dataCh >= 140) {
+      loadTweets()
       $(".alerte").css("display", "block");
     }
     else {

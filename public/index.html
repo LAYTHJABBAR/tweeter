@@ -26,8 +26,8 @@
   <!-- Top nav bar (fixed) -->
   <nav class="navbar">
     <span class="navbar-logo">tweeter</span>
-    <span class="newTweet"> <strong>Write </strong>a new tweet<span class='arrow'><i
-          class="fas fa-angle-double-down"></i></span></span>
+    <span class="newTweet"> <strong>Write </strong>a new tweet<span 
+    id = "click" class="arrow bounce"><i class="fas fa-angle-double-down"></i></span></span>
   </nav>
   <header class="header">
     <div>
@@ -37,6 +37,25 @@
   </header>
   <!-- Page-specific (main) content here -->
   <main>
+      <div class="alert">
+          <span class="closebtn">&times;</span>  
+         <h2 class = "error1">&#9888 NO TEXT TO TWEET! &#9888 </h2>
+        </div>
+        <div class="alerte">
+          <span class="closebtn">&times;</span>  
+         <h2 class = "error2">&#9888  CHARACTER SIZE EXCEEDED! &#9888 </h2>
+        </div>
+        <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+          }
+        }
+        </script>
     <section id="container" class="new-tweet">
       <form action="/tweets/" method="POST">
         <textarea class="text" name="text" placeholder="What are you humming about?"></textarea>

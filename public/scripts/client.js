@@ -43,6 +43,10 @@ const loadTweets = function () {
 }
 $(document).ready(() => {
   loadTweets();
+  $("#categories-toggle").on('click', function(eve){
+    eve.preventDefault(); 
+    $(this).toggleClass("down");
+  });
   $("form").submit(function (event) {
     let data1 = $(this).serialize();
     event.preventDefault();
@@ -50,9 +54,9 @@ $(document).ready(() => {
     console.log(dataCh)
     if (dataCh === 0) {
       loadTweets()
-      alert('NO TEXT TO TWEET ');
+      $(".alert").css("display", "block");
     } else if (dataCh >= 140) {
-      alert('character size exceeded')
+      $(".alerte").css("display", "block");
     }
     else {
       $.ajax({
@@ -65,7 +69,14 @@ $(document).ready(() => {
       });
     }
   });
+  $("#click").click(function (){
+    $("form").toggle()
+  })
 });
+
+
+
+
 
 
 

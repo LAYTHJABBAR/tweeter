@@ -1,5 +1,12 @@
 
 //Function to create mark up of tweet.
+
+const escape = function (data) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(data));
+  return div.innerHTML;
+}
+
 const createTweetElement = data => {
   return `
   <article class='tweet'>
@@ -8,7 +15,7 @@ const createTweetElement = data => {
       <h5 class="tweet-name">${data.user.name}</h5>
       <h3 class="tweet-name-right">${data.user.handle}</h3>
     </div>
-    <div class="texttweet">${data.content.text}</div>
+    <div class="texttweet">${escape(data.content.text)}</div>
     <footer class="article-footer">
       <span class="tweet-time">${data.created_at} </span>
       <div class="tweet-icons">
@@ -42,22 +49,22 @@ $(document).ready(() => {
     let dataCh = $(".text").val().length;
     console.log(dataCh)
     if (dataCh === 0) {
+      loadTweets()
+      alert('NO TEXT TO TWEET ');
+    } else if (dataCh >= 140) {
+      alert('character size exceeded')
+    }
+    else {
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: data1,
+        success: function () {
           loadTweets()
-          alert('NO TEXT TO TWEET ');
-        } else if (dataCh >= 140) {
-          alert('character size exceeded')
-        }
-        else {
-          $.ajax({
-            type: "POST",
-            url: "/tweets",
-            data: data1,
-            success: function () {
-              loadTweets()
-            },
-          });
-        }
+        },
       });
+    }
+  });
 });
 
 

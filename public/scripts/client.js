@@ -4,6 +4,12 @@ const escape = function(data) {
   div.appendChild(document.createTextNode(data));
   return div.innerHTML;
 };
+//function to return time from millisec in a day to number of date
+const date = time => {
+  const millisecondsInDay = 1000 * 60 * 60 * 24;
+  const noOfDays = Math.round((Date.now() - time) / millisecondsInDay);
+  return noOfDays;
+};
 //Function to create mark up of tweet.
 const createTweetElement = data => {
   return `
@@ -15,7 +21,7 @@ const createTweetElement = data => {
     </div>
     <div class="texttweet">${escape(data.content.text)}</div>
     <footer class="article-footer">
-      <span class="tweet-time">${data.created_at} </span>
+      <span class="tweet-time">${date(data.created_at)} days ago </span>
       <div class="tweet-icons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>

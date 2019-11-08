@@ -1,3 +1,4 @@
+//counnter function to show the number of char. whin inserted on the text area
 $(document).ready(function () {
     $(".text").on('keyup keydown', function () {
         let maxCharacters = 140;

@@ -1,9 +1,29 @@
 # Tweeter Project
 A Single Page App (SPA) buit with HTML, CSS, JS, JQuery, And AJAX on the client side , and Node, Express and MongoDB on the server side
+## app Features
 
-## app details
+### Navigation Bar
 
- 
+    When a user clicks the Compose button in the Navigation Bar:
+        if the Compose Tweet box is currently hidden, then it is shown, and the textarea inside it is auto-focused
+        if the Compose Tweet box is currently showing, then it is hidden
+        in either case, transitions between 'shown' and 'hidden' states should be animated
+
+### Character Counter
+
+    When a user types into the Compose Tweet textarea, the Character Counter is updated to show how many characters a user may still type (subtracting the number of characters they've typed from the maximum allowable character count of 140)
+
+    The Character Counter turns red (or similar) when more than 140 characters have been typed into the Compose Tweet textarea, and it shows how many characters over the 140 limit have been typed (using a negative number)
+
+### Compose Tweet
+
+    When a user submits an invalid tweet (the tweet textarea is empty or contains more than 140 characters), an appropriate error message is displayed
+
+    When a user submits a valid tweet, the list of tweets is refreshed (displaying the new tweet), the Compose Tweet textarea is cleared, and the Character Counter is reset (to 140)
+
+
+# App Pictures
+
 - 
  !["Screenshot of URLs page"](https://github.com/lighthouse-labs/tinyapp/blob/master/docs/urls-page.png)
  !["Screenshot of URLs page"](https://raw.githubusercontent.com/LAYTHJABBAR/tinyapp/master/docs/urls-page.png)
@@ -15,17 +35,15 @@ A Single Page App (SPA) buit with HTML, CSS, JS, JQuery, And AJAX on the client 
 - Express
 - EJS
 - body-parser
-- bcrypt
-- cookie-session
+- JQury
 
-## How to Run this Fancy app
+## How to Run this tweeter app
 
 - Install all dependencies `npm install` .
-- Run the development web server using the `npm start`, notice you need to change the description test on the package,json file to `run express_server.js`.
-- browse to http://localhost:8082/urls
+- Run the development web server using the `npm start`, notice you need to change the scripts-start test on the package,json file to `node server/index.js`.
+- browse to http://localhost:8082
  
 
 ## Security 
-- password encryption
-- Cookie encryption
-- All links you generate will be shown on your homepage, only viewable by you.
+-  An escape function used to prevent the Cross-Site Scripting
+ 

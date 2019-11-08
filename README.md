@@ -25,9 +25,9 @@ A Single Page App (SPA) buit with HTML, CSS, JS, JQuery, And AJAX on the client 
 # App Pictures
 
 - 
- !["Screenshot of URLs page"](https://github.com/lighthouse-labs/tinyapp/blob/master/docs/urls-page.png)
- !["Screenshot of URLs page"](https://raw.githubusercontent.com/LAYTHJABBAR/tinyapp/master/docs/urls-page.png)
- !["Screenshot of Cookies page"](https://raw.githubusercontent.com/LAYTHJABBAR/tinyapp/master/docs/cookies.png)
+ !["Screenshot of URLs page"](https://raw.githubusercontent.com/LAYTHJABBAR/tweeter/master/docs/main-page.png)
+ !["Screenshot of URLs page"](https://raw.githubusercontent.com/LAYTHJABBAR/tweeter/master/docs/mini-page.png)
+ !["Screenshot of Cookies page"](https://raw.githubusercontent.com/LAYTHJABBAR/tweeter/master/docs/no%20text%20to%20tweet.png)
 
 ## Dependencies
 

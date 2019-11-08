@@ -17,11 +17,12 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 main {
-  width: 90%;
-  margin-top: 450px;
+  width: 80%;
+  /* margin-top: 450px; */
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
   text-justify: inter-word;
   background-color: #f4f1ec; 
+  padding-left: 50px;
 }

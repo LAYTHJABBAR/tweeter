@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./styles/nav.css" />
   <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/new-flex.css" type="text/css" />
 </head>
 <body>
   <!-- Top nav bar (fixed) -->
@@ -24,15 +25,19 @@
     <span class="newTweet"> <strong>Write </strong>a new tweet<span id="click" class="arrow bounce"><i
           class="fas fa-angle-double-down"></i></span></span>
   </nav>
-  <!--Header stuff-->
+  <!---------------------------(Header)-------------------------------------->
+  <div class="flex-total" >
+     <div class= "flex1">
   <header class="header">
-    <div>
+      <div>
       <img src="/images/arabic.png">
       <h2>Layth <span class="name-light">Jabbar</span></h2>
     </div>
   </header>
-  <!-- Page-specific (main) content here -->
-  <main>
+</div>
+  <!-- -----------------------(main) ---------------------------------------->
+  <div class="flex2">
+  <main class="main">
     <div class="alert">
       <span id= "closebtn" class="closebtn">X</span> 
       <h2 class="error1">&#9888 NO TEXT TO TWEET! &#9888 </h2>
@@ -48,14 +53,17 @@
           <span class="counter">140</span></div>
       </form>
     </section>
+    <!---------------------(new-Tweet-main)------------------------------------->
     <section id="tweetcontainer" class="head"></section>
-  </form>
   </main>
+</div>
+</div>
+  <!--------------------------(External-JS)-------------------------------->
   <!-- External JS -->
   <script type="text/javascript" src="./vendor/jquery-2.2.3.min.js"></script>
   <!-- App JS -->
   <script type="text/javascript" src="./scripts/client.js"></script>
-  <!--composer-char-counter-->
+  <!--composer-char-counter JS-->
   <script src="./scripts/composer-char-counter.js"></script>
 </body>
 

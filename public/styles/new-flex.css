@@ -1,0 +1,24 @@
+/*new flex css*/
+@media only screen and (min-width: 1024px) {
+  .flex-total {
+    display: flex;
+    margin-top: 60px;
+  }
+  .flex1 {
+    width: 30%;
+    margin-right: 50px;
+    margin-left: 40px;
+  }
+  .flex2 {
+    width: 80%;
+  }
+  .header {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+
+  .navbar {
+    background-color: #4056a1;
+    background-image: none;
+  }
+}

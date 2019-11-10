@@ -41,7 +41,7 @@ A Single Page App (SPA) buit with HTML, CSS, JS, JQuery, And AJAX on the client 
 
 - Install all dependencies `npm install` .
 - Run the development web server using the `npm start`, notice you need to change the scripts-start test on the package,json file to `node server/index.js`.
-- browse to http://localhost:8082
+- browse to http://localhost:8080
  
 
 ## Security 

@@ -1,5 +1,5 @@
 # Tweeter Project
-A Single Page App (SPA) buit with HTML, CSS, JS, JQuery, And AJAX on the client side , and Node, Express and MongoDB on the server side
+A Single Page App (SPA) built with HTML, CSS, JS, JQuery, And AJAX on the client side , and Node, Express and MongoDB on the server side
 ## app Features
 
 ### Navigation Bar
